@@ -1,0 +1,64 @@
+NotasTutoriales.txt
+
+1. Indicar que queremos traquear el proyecto:
+-   Configuración datos:
+-   git config --global user.email "mail@gmail.com"
+-   git config --global user.name "nombre"
+-
+-   Arrancar proyecto de git en la carpeta:
+-   git init (carpeta donde git maneja las versiones) (inicializar proyecto)
+-   git status (como esta actualmente el repositorio)
+-   git add index.html (lo ponemos en staging area)
+-   git commit -m "mensaje/descripción"
+-   git log (ver todos los commit)
+-
+2. Hacemos cambios:
+-   git status (veremos que nos muestra que se han hecho cambios)
+-   Se tiene que volver a pasar al staging area
+-   git add index.html
+-   git commit -m "Añadido contenido"
+-   git log (veremos dos commit)
+-
+-   Si queremos viajar entre varios comits:
+-   Volver atras: git checkout bd5ddfdf (iniciales de hash de la version que queremos ir)
+-   Volver al último: git checkout master (volver al último git)
+-
+3. Como deshacer cambios:
+-   git reset hash (nos vuelve a la versión, elimina los commit posteriores, pero deja el contenido)
+-   podemos modificar el contenido i hacer de nuevo el commit
+-   
+-   Borrar commit i contenido que hemos hecho:
+-   git reset --hard (hash) (deja el estado inicial)
+-
+-   Si borramos un archivo (que no es reset hard)
+-   git restore index.html
+-   
+-   Añadir todo al staging area:
+-   git add . (punto para todo)
+-
+4. Subir proyecto en GitHub
+-   Crear nuevo repositorio
+-   Marcar opcion de SSH
+-   git remote add origin git@github.com:jaumejp/prueba-git.git
+-   git remote -v (ver donde está)
+-   
+5. Generar SSH
+-   Inicio* abrir git bash
+-   ssh-keygen -t ed25519 -C "jaumejuanperez@gmail.com" (genera clave pública y calve privada)
+-   cd > cd .ssh > podemos ver la calve pública y privada
+-   vamos a github i en settings > Añadir clave ssh
+-   cat de la clave pública (id_ed1111.pub) en la terminal
+-   pegamos el texto en github y guardamos (tenemos que marcar la opción de escribir en él)
+-   fin* git bash
+-   git push -u origin master
+-   contraseña de cuando hemos generado la clave privada/pública (la frase es "test" en este caso)
+-   
+6. Descargar repositorio (clonar) de github
+-   Inicio* abrir git bash
+-   Borrar el proyecto
+-   En el repositorio > botón clone > opción ssh > copiar link i en bash:
+-   git clone "pegar"
+-   pide la contraseña
+
+
+  
