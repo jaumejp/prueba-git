@@ -59,6 +59,21 @@ NotasTutoriales.txt
 -   En el repositorio > botón clone > opción ssh > copiar link i en bash:
 -   git clone "pegar"
 -   pide la contraseña
-
+-
+7. Crear una rama
+-   git checkout -b feature-posts-styles (crear una rama e ir a ella)
+-   ver ramas (git branch)
+-   hacemos los cambios
+-   hacemos los git add / git commit - que queramos para tenerlo separado en las versiones que queramos
+-   En github (repositorio remoto), tenemos que crear la rama (como el git checkhout -b ... que hemos hecho antes)
+-   git push -u origin feature-posts-styles
+-   contraseña
+-   si hacemos git checkhout master (vemos que desaparecen), no se han juntado
+-   para volver git checkhout feature-posts-styles
+-   hacemos un git clone del proyecto con el nombre persrona-backend, para más aldelante, ver que podemos trabajar en paralelo con diferentes personas
+-   nos ponemos en la rama principal (git checkout master)
+-   hacemos un cambio (readme.md)
+-
+-   
 
   
